@@ -35,3 +35,11 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           ignore: test
+          
+      - name: Run unit test
+        run: |
+          # make file runnable, might not be necessary
+          chmod +x "${GITHUB_WORKSPACE}/.github/test/test.sh"
+
+          # run script
+          "${GITHUB_WORKSPACE}/.github/test/test.sh"
