@@ -39,7 +39,7 @@ jobs:
       - name: Run unit test
         run: |
           # make file runnable, might not be necessary
-          chmod +x "${GITHUB_WORKSPACE}/.github/test/test.sh"
+          chmod +x "${GITHUB_WORKSPACE}/test/test.sh"
 
           # run script
-          "${GITHUB_WORKSPACE}/.github/test/test.sh"
+          "${GITHUB_WORKSPACE}/test/test.sh"
